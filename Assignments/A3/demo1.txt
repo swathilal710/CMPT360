@@ -1,0 +1,12 @@
+# Valid BB
+./vmsim --mode=bb --base=4096 --limit=64 --trace=tests/bb/t1.txt
+# Invalid BB
+./vmsim --mode=bb --base=-4096 --limit=64 --trace=tests/bb/t1.txt
+# Valid SEG
+./vmsim --mode=seg --config=tests/seg/three-seg.ini --trace=tests/seg/t2.txt
+# Invalid CLI
+./vmsim --mode=bb -base=4096
+# Missing trace
+./vmsim --mode=bb --base=4096 --limit=64 --trace=missing.txt
+# Missing config
+./vmsim --mode=seg --config=missing.ini --trace=tests/seg/t2.txt

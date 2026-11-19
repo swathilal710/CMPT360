@@ -1,0 +1,7 @@
+# CMPT360 A3 - Base and Bounds boundary cases
+# Format: OP ADDRESS
+R 0
+R 63
+W 64
+R 65
+W 5000

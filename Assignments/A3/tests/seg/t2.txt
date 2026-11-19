@@ -1,0 +1,7 @@
+# CMPT360 A3 - Segmentation demo
+# Format: OP SEGMENT OFFSET
+X code 0
+R heap 10
+W code 1
+R stack -1
+R stack -64

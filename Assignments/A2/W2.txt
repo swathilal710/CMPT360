@@ -1,0 +1,4 @@
+# Two processes arrive together
+# Format: PID ARRIVAL CPU_TIME
+1 0 5
+2 0 3

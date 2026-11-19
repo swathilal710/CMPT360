@@ -1,0 +1,6 @@
+# CMPT360 A3 - Malformed Base and Bounds trace
+R 16
+Q 32
+W G1
+R
+W 10

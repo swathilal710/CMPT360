@@ -1,0 +1,4 @@
+# The CPU is idle 
+# Format: PID ARRIVAL CPU_TIME
+0 0 1
+2 5 2
