@@ -1,0 +1,6 @@
+# CMPT360 A3 - Base and Bounds demo
+# Format: OP ADDRESS
+R 0
+W 10
+R 63
+W 4096

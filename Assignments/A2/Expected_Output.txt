@@ -1,0 +1,42 @@
+Expected output examples
+========================
+
+
+
+1. RR, W1 workload, quantum 1
+--------------------------------
+./sched --policy=RR --quantum=1 --in=W1.txt
+time: 0 1 2 3 4 5 6 7 8 9 10 11
+run : 0 0 0 1 0 1 2 0 1 0 1 0
+P0: first run=0 completion=12 TAT=12 RESP=0
+P1: first run=3 completion=11 TAT=9 RESP=1
+P2: first run=6 completion=7 TAT=3 RESP=2
+System: ctx_switches=9, avgTAT=8.000, avgRESP=1.000
+
+2. FCFS, W1 workload
+--------------------
+./sched --policy=FCFS --in=W1.txt
+time: 0 1 2 3 4 5 6 7 8 9 10 11
+run : 0 0 0 0 0 0 0 1 1 1 1 2
+P0: first run=0 completion=7 TAT=7 RESP=0
+P1: first run=7 completion=11 TAT=9 RESP=5
+P2: first run=11 completion=12 TAT=8 RESP=7
+System: ctx_switches=2, avgTAT=8.000, avgRESP=4.000
+
+3. RR, W2 workload, quantum 2
+-----------------------------
+./sched --policy=RR --quantum=2 --in=W2.txt
+time: 0 1 2 3 4 5 6 7
+run : 1 1 2 2 1 1 2 1
+P1: first run=0 completion=8 TAT=8 RESP=0
+P2: first run=2 completion=7 TAT=7 RESP=2
+System: ctx_switches=4, avgTAT=7.500, avgRESP=1.000
+
+4. RR, W3 workload, quantum 2
+----------------------------------------------
+./sched --policy=RR --quantum=2 --in=W3.txt
+time: 0 1 2 3 4 5 6
+run : 0 - - - - 2 2
+P0: first run=0 completion=1 TAT=1 RESP=0
+P2: first run=5 completion=7 TAT=2 RESP=0
+System: ctx_switches=1, avgTAT=1.500, avgRESP=0.000
